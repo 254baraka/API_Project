@@ -75,3 +75,11 @@ def delete_student(
         raise HTTPException(404, "Student not found")
 
     return {"message": "Student deleted successfully"}
+
+from fastapi import FastAPI
+
+# Your existing code...
+
+@app.get("/")
+async def root():
+    return {"message": "Welcome to the Grade Tracker API"}
